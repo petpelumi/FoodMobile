@@ -30,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -53,4 +56,11 @@ dependencies {
 
     //gif
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.17")
+
+    //retrofit converts json file to kotlin object
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.3.0")
+
+    //glide capture images from the internet and insert into the image view
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
 }
